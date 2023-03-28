@@ -1,0 +1,20 @@
+<h1> {{ title }} </h1>
+
+<div>
+  <form action="localhost:3000/estoque/create" method="post" >
+    <label for="codigo">Código</label><br>
+    <input type="number" id="codigo" name="codigo"><br>
+    <label for="descricao">Descrição</label><br>
+    <input type="text" id="descricao" name="descricao"><br>
+    <label for="quantidadedisponivel">Quantidade Dísponivel</label><br>
+    <input type="number" id="quantidadedisponivel" name="quantidadedisponivel"><br>
+    <label for="capacidademaxima">Capacidade Máxima</label><br>
+    <input type="number" id="capacidademaxima" name="capacidademaxima"><br>
+    <label for="quantidademinima">Quantidade Mínima</label><br>
+    <input type="number" id="quantidademinima" name="quantidademinima"><br>
+    <input type="submit" value="Submit"><br>
+  </form>
+  <a routerLink='/recipes'>Listar Receitas</a>
+</div>
+
+<router-outlet></router-outlet>

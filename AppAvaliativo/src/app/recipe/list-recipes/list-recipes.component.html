@@ -1,0 +1,96 @@
+<div class="row">
+    <h1>Lista de Peças</h1>
+    
+    <div *ngFor="let estoques of estoque" class="column">
+        <div  class="card">
+            <div *ngIf=" estoques.quantidade_disponivel  < estoques.quantidade_minima" style="color:red">
+
+                <div> 
+                    <h3>Descrição</h3>
+                    {{ estoques._id }} 
+            </div><br>
+            <div> 
+                <h3>Descrição</h3>
+                {{ estoques.descricao }} 
+            </div><br>
+            <div > 
+                <h3>Código</h3>
+                {{ estoques.codigo }} 
+            </div><br>
+            <div > 
+                <h3>Quantidade Disponivel</h3>
+                {{ estoques.quantidade_disponivel }} 
+    
+            </div><br>
+            <div > 
+                <h3>Capacidade Máxima</h3>
+                {{ estoques.capacidade_maxima }}  
+            </div><br>
+            <div > 
+                <h3>Quantidade Mínima</h3>
+                {{ estoques.quantidade_minima }} 
+            </div><br>
+            </div>
+            <div *ngIf="estoques.quantidade_disponivel  >= estoques.quantidade_minima">
+                <div *ngIf=" estoques.quantidade_disponivel  < (estoques.capacidade_maxima*0.30)" style="color:orange">
+
+                    <div> 
+                        <h3>Descrição</h3>
+                        {{ estoques._id }} 
+                </div><br>
+                <div> 
+                    <h3>Descrição</h3>
+                    {{ estoques.descricao }} 
+                </div><br>
+                <div > 
+                    <h3>Código</h3>
+                    {{ estoques.codigo }} 
+                </div><br>
+                <div > 
+                    <h3>Quantidade Disponivel</h3>
+                    {{ estoques.quantidade_disponivel }} 
+        
+                </div><br>
+                <div > 
+                    <h3>Capacidade Máxima</h3>
+                    {{ estoques.capacidade_maxima }}  
+                </div><br>
+                <div > 
+                    <h3>Quantidade Mínima</h3>
+                    {{ estoques.quantidade_minima }} 
+                </div><br>
+                </div>
+                <div *ngIf="estoques.quantidade_disponivel  >= (estoques.capacidade_maxima*0.30)">
+                    <div> 
+                        <h3>Descrição</h3>
+                        {{ estoques._id }} 
+                </div><br>
+                <div> 
+                    <h3>Descrição</h3>
+                    {{ estoques.descricao }} 
+                </div><br>
+                <div > 
+                    <h3>Código</h3>
+                    {{ estoques.codigo }} 
+                </div><br>
+                <div > 
+                    <h3>Quantidade Disponivel</h3>
+                    {{ estoques.quantidade_disponivel }} 
+        
+                </div><br>
+                <div > 
+                    <h3>Capacidade Máxima</h3>
+                    {{ estoques.capacidade_maxima }}  
+                </div><br>
+                <div > 
+                    <h3>Quantidade Mínima</h3>
+                    {{ estoques.quantidade_minima }} 
+                </div><br>
+                </div>
+         >
+            </div>
+     
+        </div>
+    </div>
+    
+</div>
